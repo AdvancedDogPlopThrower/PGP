@@ -1,0 +1,11 @@
+echo "test message string" | gpg --encrypt --armor --recipient pgp@donb -o encrypted.txt.asc
+
+gpg --decrypt encrypted.txt.asc
+
+
+
+
+
+echo "test message string" | gpg --armor --clearsign > signed.txt
+gpg --verify signed.txt
+
